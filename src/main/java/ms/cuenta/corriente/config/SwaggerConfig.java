@@ -1,4 +1,4 @@
-package ms.usuario.config;
+package ms.cuenta.corriente.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
