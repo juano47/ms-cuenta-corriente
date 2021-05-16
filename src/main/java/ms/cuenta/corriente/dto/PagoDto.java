@@ -19,5 +19,5 @@ public class PagoDto {
     private Instant fechaCobro;
     private String banco;
     private Integer tipoPago;
-    ClienteDto clienteDto;
+    private Integer idCliente;
 }

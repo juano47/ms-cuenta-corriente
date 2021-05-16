@@ -6,6 +6,7 @@ import java.util.Optional;
 import java.util.OptionalInt;
 import java.util.stream.IntStream;
 
+import ms.cuenta.corriente.dto.EstadoDto;
 import ms.cuenta.corriente.dto.PagoDto;
 import ms.cuenta.corriente.service.PagoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,5 +42,14 @@ public class PagoController {
 		return ResponseEntity.ok(nuevo);
 	}
 
+	@GetMapping("/estadoCuenta/{id}")
+	public ResponseEntity<EstadoDto> consultarEstado(@PathVariable Integer id){
+		try {
+			EstadoDto estadoDto= pagoService.consultarEstado(id);
+			return ResponseEntity.ok(estadoDto);
+		} catch (Exception e) {
+			return ResponseEntity.status(500).build();
+		}
+	}
 
 }
