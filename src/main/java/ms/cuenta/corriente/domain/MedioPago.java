@@ -18,7 +18,7 @@ public class MedioPago {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_medio")
-	protected Integer id;
+	private Integer id;
 	@Column(name = "observacion")
-	protected String observacion;
+	private String observacion;
 }
